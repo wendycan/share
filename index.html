@@ -1,0 +1,92 @@
+<html>
+<head>
+  <title></title>
+  <style>
+    body .bdshare-button-style0-16 a, body .bdshare-button-style0-16 .bds_more {
+      background: none;
+      height: 175px;
+      width: 175px;
+      background-position: 0 0 !important;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .bds_qzone {
+      background-image: url(/img/1.png) !important;
+    }
+    .bds_tqq {
+      background-image: url(/img/2.png) !important;
+    }
+    .bds_tsina {
+      background-image: url(/img/1.png) !important;
+    }
+    .bds_renren {
+      background-image: url(/img/2.png) !important;
+    }
+    .button {
+      background-color: pink;
+      width: 170px;
+      padding: 50px;
+      text-align: center;
+      font-size: 60px;
+    }
+    .bottom {
+      position: fixed;
+      bottom: 0;
+    }
+    .bdsharebuttonbox {
+      position: fixed;
+      bottom: -500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="share" id="share_button">
+    <div class="button bottom">
+      分享
+    </div>
+  </div>
+<div class="bdsharebuttonbox" data-tag="share_1" id="share_content">
+  <a class="bds_qzone" data-cmd="qzone" href="#"></a>
+  <a class="bds_tqq" data-cmd="tqq"></a>
+  <a class="bds_tsina" data-cmd="tsina"></a>
+  <a class="bds_renren" data-cmd="renren"></a>
+  <a class="bds_weixin" data-cmd="weixin"></a>
+  <a class="bds_tqf" data-cmd="tqf"></a>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+<script>
+  window._bd_share_config = {
+    common : {
+      bdText : '自定义分享内容',
+      bdDesc : '自定义分享摘要',
+      bdUrl : '自定义分享url地址',
+      bdPic : '自定义分享图片'
+    },
+    share : [{
+      "bdSize" : 16
+    }],
+    image : [{
+      viewType : 'list',
+      viewPos : 'top',
+      viewColor : 'black',
+      viewSize : '16',
+      viewList : ['qzone','tsina','huaban','tqq','renren']
+    }],
+    selectShare : [{
+      "bdselectMiniList" : ['qzone','tqq',,'bdxc','tqf']
+    }]
+  }
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#share_button').on('click', function () {
+      $('#share_content').css('bottom', 100);
+    });
+  });
+  // document.getElementById('share_button').onclick = function () {
+  //   document.getElementById('share_content').bottom = '0';
+  // }
+</script>
+</body>
+</html>
